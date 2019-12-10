@@ -10,5 +10,6 @@ public class RestRepositoryConfigurator implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(Todo.class);
+        config.exposeIdsFor(User.class);
     }
 }

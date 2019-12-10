@@ -6,10 +6,6 @@ import Login from '../components/Login'
 
 Vue.use(VueRouter)
 
-// const Test = { template: '<p>Test</p>'}
-// const Fuck = { template: '<p>Fuck</p>'}
-
-
 const router = new VueRouter({
     mode: 'history',
     routes: [

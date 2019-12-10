@@ -19,9 +19,6 @@ const options = {
 Vue.use(VueLogger, options);
 
 export default router
-// new Vue({
-//   router
-// }).$mount('#app')
 
 /* eslint-disable no-new */
 new Vue({

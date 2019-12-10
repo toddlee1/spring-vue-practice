@@ -8,14 +8,18 @@
       </div>
       <div v-else>
         <header class="header">
-          <input
+          <!-- <input
             class="new-todo"
             autofocus
             autocomplete="off"
             :placeholder="this.inputPlaceholder"
             v-model="newTodo"
             @keyup.enter="addTodo"
-          />
+          /> -->
+          <input
+            autofocus
+            autocomplete="off"
+            v-model="newUser" />
         </header>
         <section class="main" v-show="todos.length" v-cloak>
           <input class="toggle-all" type="checkbox" v-model="allDone" />
@@ -120,6 +124,7 @@ const Todos = {
     return {
       todos: [],
       newTodo: "",
+      newUser: "",
       editedTodo: null,
       visibility: "all",
       loading: true,
@@ -179,6 +184,9 @@ const Todos = {
   // methods that implement data logic.
   // note there's no DOM manipulation here at all.
   methods: {
+    // checkUser: function() {
+    //   var value = this.newUser
+    // },
     addTodo: function() {
       var value = this.newTodo && this.newTodo.trim();
       if (!value) {

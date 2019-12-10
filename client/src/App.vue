@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <Todos /> -->
     <router-view></router-view>
     <footer class="info">
       <p><router-link to="/">Todos</router-link></p>
@@ -13,43 +12,6 @@
 </template>
 
 <script>
-  // import Todos from './components/Todos'
-  // import Login from './components/Login'
-
-  // import Vue from 'vue'
-  // import VueRouter from 'vue-router'
-  // app Vue instance
-
-  // Vue.use(VueRouter)
-
-  // const app = {
-  //   name: 'app',
-  //   components: {
-  //     Todos
-  //   },
-  //   // app initial state
-  //   data: () => {
-  //     return {
-  //     }
-  //   }
-  // }
-
-//   const router = new VueRouter({
-//   mode: 'history',
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Todos',
-//       components: { Todos }
-//     },
-//     {
-//       path: '/login',
-//       name: 'Login',
-//       components: { Login }
-//     }
-//   ]
-// })
-
   export default {}
 </script>
 
