@@ -20,5 +20,10 @@ export default {
   // (U)pdate  
   updateForId: (id, text, completed) => instance.put('todos/'+id, {title: text, completed: completed}),  
   // (D)elete  
-  removeForId: (id) => instance.delete('todos/'+id)  
+  removeForId: (id) => instance.delete('todos/'+id),
+  checkUser: (id) => instance.get('users/'+id, {
+    transformResponse: [function (data) {
+      return data? JSON.parse(data)._embedded.users : data;
+    }]
+  })
 }
