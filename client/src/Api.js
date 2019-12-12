@@ -23,7 +23,7 @@ export default {
   removeForId: (id) => instance.delete('todos/'+id),
   checkUser: (id) => instance.get('users/'+id, {
     transformResponse: [function (data) {
-      return data? JSON.parse(data)._embedded.users : data;
+      return data? JSON.parse(data) : data;
     }]
   })
 }

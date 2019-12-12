@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="user">
     <h1 class="title">Login</h1>
     <section class="todoapp">
       <div>
@@ -13,9 +13,13 @@
           <input
             autocomplete="off"
             v-model="password" />
+
+          <button 
+            v-on:click="checkUser"
+          >Button</button>
         </header>
         <section class="main">
-
+        
         </section>
         <footer class="footer">
 
@@ -29,13 +33,9 @@
 import api from "../Api";
 
 // app Vue instance
-const Todos = {
-  name: "Todos",
-  props: {
-    activeUser: Object
-  },
-
+export default {
   // app initial state
+  // el: '#user',
   data: function() {
     return {
       id: "",
@@ -43,9 +43,6 @@ const Todos = {
       error: null
     };
   },
-
-  // methods that implement data logic.
-  // note there's no DOM manipulation here at all.
   methods: {
     checkUser: function() {
       var user = this.id && this.id.trim();
@@ -56,11 +53,10 @@ const Todos = {
       api
         .checkUser(user)
         .then(response => {
-          this.$log.debug("Checking User: ", response);
+          this.$log.debug("Checking User: ", response.data.password);
           if(this.password == response.data.password) {
-            return;
+            this.$router.push({path: '/', params: {id: user }});
           }
-          
         })
         .catch(error => {
           this.$log.debug(error);
@@ -82,7 +78,7 @@ const Todos = {
   }
 };
 
-export default Todos;
+// export default Todos;
 </script>
 
 <style>

@@ -24,9 +24,10 @@ public class SpringBootVueApplication {
 	@Bean
 	ApplicationRunner init(TodoRepository repository, UserRepository userRepository) {
 		return args -> {
-			Stream.of("Buy milk", "Eat Lunch", "Haha", "Study Vue.JS").forEach(name -> {
+			Stream.of("Buy milk", "Eat Lunch", "Haha", "Study Vue.JS").forEach(title -> {
 				Todo todo = new Todo();
-				todo.setTitle(name);
+				todo.setTitle(title);
+				todo.setUser(user);
 				repository.save(todo);
 			});
 

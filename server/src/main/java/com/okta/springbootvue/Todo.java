@@ -23,7 +23,14 @@ public class Todo {
 
     private Boolean completed = false;
 
-    public void setTitle(String name) {
-        this.title = name;
+    @NonNull
+    private String user;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }
