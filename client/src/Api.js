@@ -16,7 +16,12 @@ export default {
     transformResponse: [function (data) {  
       return data? JSON.parse(data)._embedded.todos : data;  
     }]  
-  }),  
+  }),
+  getTodosByUser: (id) => instance.get('todos/search/findByUser?user='+id, {
+    transformResponse: [function (data) {
+      return data? JSON.parse(data)._embedded.todos : data;
+    }]
+  }),
   // (U)pdate  
   updateForId: (id, text, completed) => instance.put('todos/'+id, {title: text, completed: completed}),  
   // (D)elete  

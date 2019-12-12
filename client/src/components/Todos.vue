@@ -129,8 +129,9 @@ const Todos = {
 
   mounted() {
     api
-      .getAll()
+      .getTodosByUser(this.$route.params.id)
       .then(response => {
+        this.$log.debug(this.$route.params.id);
         this.$log.debug("Data loaded: ", response.data);
         this.todos = response.data;
       })

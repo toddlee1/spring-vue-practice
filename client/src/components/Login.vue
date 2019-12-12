@@ -55,7 +55,7 @@ export default {
         .then(response => {
           this.$log.debug("Checking User: ", response.data.password);
           if(this.password == response.data.password) {
-            this.$router.push({path: '/', params: {id: user }});
+            this.$router.push({name: 'todos', params: {id: user }});
           }
         })
         .catch(error => {

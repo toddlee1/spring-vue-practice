@@ -27,7 +27,7 @@ public class SpringBootVueApplication {
 			Stream.of("Buy milk", "Eat Lunch", "Haha", "Study Vue.JS").forEach(title -> {
 				Todo todo = new Todo();
 				todo.setTitle(title);
-				todo.setUser(user);
+				todo.setUser("lsh");
 				repository.save(todo);
 			});
 
