@@ -13,10 +13,12 @@
           <input
             autocomplete="off"
             v-model="password" />
+          <br>
 
           <button 
+            class='login'
             v-on:click="checkUser"
-          >Button</button>
+          >Login</button>
         </header>
         <section class="main">
         
@@ -34,8 +36,7 @@ import api from "../Api";
 
 // app Vue instance
 export default {
-  // app initial state
-  // el: '#user',
+
   data: function() {
     return {
       id: "",

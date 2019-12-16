@@ -20,6 +20,10 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 
+button.login {
+    background-color: #bfbfbf;
+}
+
 body {
     font: 14px Arial, sans-serif;
     line-height: 1.4em;
