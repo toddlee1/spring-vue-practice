@@ -8,9 +8,10 @@ const instance = axios.create({
   timeout: 1000  
 });  
   
-export default {  
+export default {
+  
   // (C)reate  
-  createNew: (text, completed) => instance.post('todos', {title: text, completed: completed}),  
+  createNew: (user, text, completed) => instance.post('todos', {title: text, user: user, completed: completed}),
   // (R)ead  
   getAll: () => instance.get('todos', {  
     transformResponse: [function (data) {  

@@ -187,11 +187,12 @@ const Todos = {
       }
 
       api
-        .createNew(value, false)
+        .createNew(this.$route.params.id, value, false)
         .then(response => {
           this.$log.debug("New item created:", response);
           this.todos.push({
             id: response.data.id,
+            user: this.$route.params.id,
             title: value,
             completed: false
           });
