@@ -8,7 +8,9 @@
           <br />
           <input class="login" autocomplete="off" v-model="password" />
           <br />
-          <button class="login" v-on:click="checkUser">Login</button>
+          <input class="login" autocomplete="off" v-model="name" />
+          <br />
+          <button class="login" v-on:click="createUser">Register</button>
         </header>
         <section class="main"></section>
         <footer class="footer"></footer>
@@ -30,18 +32,21 @@ export default {
     };
   },
   methods: {
-    checkUser: function() {
-      var user = this.id && this.id.trim();
-      if (!user) {
+    createUser: function() {
+      var id = this.id && this.id.trim();
+      var password = this.password && this.password.trim();
+      var name = this.name && this.name.trim();
+
+      if (!id || !password || !name) {
         return;
       }
 
       api
-        .checkUser(user)
+        .createUser(id, password, name)
         .then(response => {
-          this.$log.debug("Checking User: ", response.data.password);
+          this.$log.debug("Creating User: ", id);
           if (this.password == response.data.password) {
-            this.$router.push({ name: "todos", params: { id: user } });
+            this.$router.push({ name: "login" });
           }
         })
         .catch(error => {

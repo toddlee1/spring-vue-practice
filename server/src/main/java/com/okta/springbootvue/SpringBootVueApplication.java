@@ -24,18 +24,18 @@ public class SpringBootVueApplication {
 	@Bean
 	ApplicationRunner init(TodoRepository repository, UserRepository userRepository) {
 		return args -> {
-			Stream.of("Buy milk", "Eat Lunch", "Haha", "Study Vue.JS").forEach(title -> {
-				Todo todo = new Todo();
-				todo.setTitle(title);
-				todo.setUser("lsh");
-				repository.save(todo);
-			});
+			// Stream.of("Buy milk", "Eat Lunch", "Haha", "Study Vue.JS").forEach(title -> {
+			// 	Todo todo = new Todo();
+			// 	todo.setTitle(title);
+			// 	todo.setUser("lsh");
+			// 	repository.save(todo);
+			// });
 
-			User user = new User();
-			user.setId("lsh");
-			user.setName("Lee");
-			user.setPassword("12341234");
-			userRepository.save(user);
+			// User user = new User();
+			// user.setId("lsh");
+			// user.setName("Lee");
+			// user.setPassword("12341234");
+			// userRepository.save(user);
 
 			userRepository.findAll().forEach(System.out::println);
 			repository.findAll().forEach(System.out::println);

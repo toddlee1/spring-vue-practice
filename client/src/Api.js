@@ -12,6 +12,7 @@ export default {
   
   // (C)reate  
   createNew: (user, text, completed) => instance.post('todos', {title: text, user: user, completed: completed}),
+  createUser: (id, password, name) => instance.post('users', {id: id, password: password, name: name}),
   // (R)ead  
   getAll: () => instance.get('todos', {  
     transformResponse: [function (data) {  
