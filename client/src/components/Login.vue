@@ -1,14 +1,35 @@
+<style scoped>
+@import url("https://unpkg.com/purecss@1.0.1/build/pure-min.css");
+</style>
+
 <template>
   <div id="user">
     <h1 class="title">Login</h1>
     <section class="todoapp">
       <div>
         <header class="header">
-          <input class="login" autocomplete="off" v-model="id" />
+          <form class="pure-form pure-form-aligned" @submit.prevent="checkUser">
+            <fieldset>
+              <div class="pure-control-group">
+                <label for="name">ID</label>
+                <input id="name" type="text" placeholder="ID" v-model="id" />
+              </div>
+
+              <div class="pure-control-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password" v-model="password" />
+              </div>
+
+              <div class="pure-controls">
+                <button class="pure-button pure-button-primary">Login</button>
+              </div>
+            </fieldset>
+          </form>
+          <!-- <input class="login" autocomplete="off" v-model="id" />
           <br />
           <input class="login" autocomplete="off" v-model="password" />
           <br />
-          <button class="login" v-on:click="checkUser">Login</button>
+          <button class="login" v-on:click="checkUser">Login</button>-->
         </header>
         <section class="main"></section>
         <footer class="footer"></footer>
