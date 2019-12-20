@@ -4,7 +4,7 @@
 
 <template>
   <div id="user">
-    <h1 class="title">Login</h1>
+    <h1 class="title">New User</h1>
     <section class="todoapp">
       <div>
         <header class="header">

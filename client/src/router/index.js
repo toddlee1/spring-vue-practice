@@ -12,13 +12,13 @@ const router = new VueRouter({
     routes: [
       {
         name: 'todos',
-        path: '/',
+        path: '/todos',
         component: Todos,
         props: true
       },
       {
         name: 'login',
-        path: '/login',
+        path: '/',
         component: Login,
         props: true
       },

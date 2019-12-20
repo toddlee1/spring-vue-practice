@@ -1,28 +1,29 @@
-### 사용 기술
+## 개요
 
-* Spring
-* Vue, Vue-Router
-* AWS, RDS
+* Server-Client 구조의 Todo Application
+  * Server : SpringBoot REST API
+  * Client : Vue.js
+  * DB : MySQL ( AWS RDS )
+  * Cloud Platform : AWS
 
-### Page
+## 설계
+
+* 서비스 디자인
+  ![image-20191220175403204](/Users/nhn/Library/Application Support/typora-user-images/image-20191220175403204.png)
+
+* 데이터베이스 디자인
+  ![image-20191220175510284](/Users/nhn/Library/Application Support/typora-user-images/image-20191220175510284.png)
+
+
+
+## 서비스 페이지
 
 * 로그인 페이지
-* 사용자 별 TodoList 페이지
+  ![image-20191220180507992](/Users/nhn/Library/Application Support/typora-user-images/image-20191220180507992.png)
 
-### Database
+* 회원가입 페이지
+  ![image-20191220180530486](/Users/nhn/Library/Application Support/typora-user-images/image-20191220180530486.png)
 
-* Platform : AWS RDS
+* Todo 페이지
+  ![image-20191220180623386](/Users/nhn/Library/Application Support/typora-user-images/image-20191220180623386.png)
 
-* User Table
-
-  | num  | id    | password | name   |
-  | ---- | ----- | -------- | ------ |
-  | 1    | seong | 12341234 | 이누구 |
-
-* Todo Table
-
-  | id   | title       | completed | user_id |
-  | ---- | ----------- | --------- | ------- |
-  | 1    | Programming | True      | Seong   |
-
-  

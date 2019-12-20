@@ -25,6 +25,7 @@
               </div>
             </fieldset>
           </form>
+          <button class="pure-button pure-button-primary" v-on:click="routeUserCreate">New User</button>
           <!-- <input class="login" autocomplete="off" v-model="id" />
           <br />
           <input class="login" autocomplete="off" v-model="password" />
@@ -70,6 +71,9 @@ export default {
           this.error = "Failed to load User";
         })
         .finally(() => (this.loading = false));
+    },
+    routeUserCreate: function() {
+      this.$router.push({ name: "create" });
     }
   },
 
