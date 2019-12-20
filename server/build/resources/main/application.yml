@@ -1,0 +1,16 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://springvueproject.c3stvzfr4584.ap-northeast-2.rds.amazonaws.com:3306/spring
+    username: admin
+    password: dltjdgus2013
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
